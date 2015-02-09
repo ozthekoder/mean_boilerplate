@@ -1,0 +1,92 @@
+$header-height : 50px;
+$menu-width : 300px;
+
+$shade-primary : #3B61AD;
+$shade-darker-1 : darken($shade-primary, 5%);
+$shade-darker-2 : darken($shade-primary, 15%);
+$shade-darker-3 : darken($shade-primary, 25%);
+$shade-darker-4 : darken($shade-primary, 35%);
+$shade-darker-5 : darken($shade-primary, 45%);
+$shade-darker-6 : darken($shade-primary, 65%);
+$shade-lighter-1 : lighten($shade-primary, 5%);
+$shade-lighter-2 : lighten($shade-primary, 15%);
+$shade-lighter-3 : lighten($shade-primary, 25%);
+$shade-lighter-4 : lighten($shade-primary, 35%);
+$shade-lighter-5 : lighten($shade-primary, 45%);
+$shade-lighter-6 : lighten($shade-primary, 65%);
+
+$color-primary-0 : #FFDBAA;
+$color-primary-1 : #D4A76A;
+$color-primary-2 : #AA7939;
+$color-primary-3 : #805215;
+$color-primary-4 : #553100;
+$facebook-color: #3b5998;
+$twitter-color: #00aced;
+$google-plus--color: #dd4b39;
+$linkedin-color: #007bb6;
+$github-color: #000;
+
+.brand-gradient {
+  color: #ffdfdf;
+  border: 1px solid #841313;
+  background: #AA3939;
+  background: -moz-linear-gradient(top, #AA3939 0%, #841313 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #AA3939), color-stop(100%, #841313));
+  background: -webkit-linear-gradient(top, #AA3939 0%, #841313 100%);
+  background: -o-linear-gradient(top, #AA3939 0%, #841313 100%);
+  background: -ms-linear-gradient(top, #AA3939 0%, #841313 100%);
+  background: linear-gradient(to bottom, #AA3939 0%, #841313 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AA3939', endColorstr='#841313', GradientType=0);
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 2px;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus{
+  outline: none;
+  border: solid 1px $color-primary-3;
+  box-shadow: 0 0 5px 1px $color-primary-2;
+}
+
+button, .button {
+  padding: 5px;
+  color: $color-primary-1;
+  border: 1px solid $color-primary-4;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: #805215; /* Old browsers */
+  background: -moz-linear-gradient(top,  #805215 0%, #553100 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#805215), color-stop(100%,#553100)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #805215 0%,#553100 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #805215 0%,#553100 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #805215 0%,#553100 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #805215 0%,#553100 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#805215', endColorstr='#553100',GradientType=0 ); /* IE6-9 */
+
+}

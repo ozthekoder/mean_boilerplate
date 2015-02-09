@@ -1,0 +1,85 @@
+<section class="signup-view container" data-ng-controller="AuthenticationController">
+	<h3 class="text-center">Sign up using your social accounts</h3>
+	<div class="social-signup-container text-center">
+		<a href="/auth/facebook" class="provider-icon icon-social-facebook">
+			<!--<img src="/modules/users/img/buttons/facebook.png">-->
+		</a>
+		<a href="/auth/twitter" class="provider-icon icon-social-twitter">
+			<!--<img src="/modules/users/img/buttons/twitter.png">-->
+		</a>
+		<a href="/auth/google" class="provider-icon icon-social-google-plus">
+			<!--<img src="/modules/users/img/buttons/google.png">-->
+		</a>
+		<a href="/auth/linkedin" class="provider-icon icon-social-linkedin">
+			<!--<img src="/modules/users/img/buttons/linkedin.png">-->
+		</a>
+		<a href="/auth/github" class="provider-icon icon-social-github">
+			<!--<img src="/modules/users/img/buttons/github.png">-->
+		</a>
+	</div>
+	<h3 class="text-center">Or with your email</h3>
+	<div class="signup-form-container">
+		<form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
+			<table>
+				<tbody>
+				<tr>
+					<td>
+						<label for="avatar">Avatar</label>
+					</td>
+					<td>
+						<input type="input" required id="avatar" name="avatar" class="form-control" ng-file-select data-ng-model="credentials.avatar">
+					</td>
+				</tr>
+					<tr>
+						<td>
+							<label for="firstName">First Name</label>
+						</td>
+						<td>
+							<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="lastName">Last Name</label>
+						</td>
+						<td>
+							<input type="text" id="lastName" name="lastName" class="form-control" data-ng-model="credentials.lastName" placeholder="Last Name">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="email">Email</label>
+						</td>
+						<td>
+							<input type="email" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="Email">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="username">Username</label>
+						</td>
+						<td>
+							<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="password">Password</label>
+						</td>
+						<td>
+							<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="text-center" style="padding: 10px 0px;">
+				<button type="submit" class="btn btn-large btn-primary">Sign up</button>
+				or
+				<a href="/#!/signin" class="show-signup">Sign in</a>
+			</div>
+			<div data-ng-show="error" class="text-center text-danger">
+				<strong data-ng-bind="error"></strong>
+			</div>
+		</form>
+	</div>
+</section>
